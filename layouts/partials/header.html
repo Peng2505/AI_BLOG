@@ -1,9 +1,9 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a class="site-title" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
+    <a class="site-title" href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
     <nav class="site-nav">
-      <a href="{{ "/" | relURL }}">首页</a>
-      <a href="{{ "/posts/" | relURL }}">全部文章</a>
+      <a href="{{ .Site.Home.RelPermalink }}">首页</a>
+      <a href="{{ (site.GetPage "/posts").RelPermalink }}">全部文章</a>
       {{ with .Site.Params.github }}<a href="{{ . }}" rel="noopener">GitHub</a>{{ end }}
     </nav>
   </div>
