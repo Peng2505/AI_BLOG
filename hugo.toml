@@ -5,6 +5,7 @@ title = "彭梓坚的技术博客"
 enableRobotsTXT = true
 enableEmoji = true
 hasCJKLanguage = true
+timeZone = "Asia/Shanghai"
 
 [pagination]
   pagerSize = 10
