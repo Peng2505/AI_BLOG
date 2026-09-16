@@ -1,0 +1,23 @@
+{{ define "main" }}
+<h1 class="page-title">{{ .Title }}</h1>
+{{ with .Content }}<div class="page-intro">{{ . }}</div>{{ end }}
+
+<ul class="post-list">
+  {{ range .Paginator.Pages }}
+  <li>
+    <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+    {{ with .Summary }}<p class="post-summary">{{ . }}</p>{{ end }}
+  </li>
+  {{ end }}
+</ul>
+
+{{ $pag := .Paginator }}
+{{ if gt $pag.TotalPages 1 }}
+<nav class="pager">
+  {{ if $pag.HasPrev }}<a href="{{ $pag.Prev.URL }}">← 更新</a>{{ end }}
+  <span>{{ $pag.PageNumber }} / {{ $pag.TotalPages }}</span>
+  {{ if $pag.HasNext }}<a href="{{ $pag.Next.URL }}">更早 →</a>{{ end }}
+</nav>
+{{ end }}
+{{ end }}

@@ -1,0 +1,30 @@
+baseURL = "https://peng2505.github.io/AI_BLOG/"
+locale = "zh-cn"
+defaultContentLanguage = "zh-cn"
+title = "彭梓坚的技术博客"
+enableRobotsTXT = true
+enableEmoji = true
+hasCJKLanguage = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  author = "彭梓坚"
+  description = "AI Agent / RAG / 多智能体系统的实践记录"
+  github = "https://github.com/Peng2505"
+
+[markup]
+  [markup.highlight]
+    noClasses = true
+    style = "github-dark"
+    lineNos = false
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[taxonomies]
+  tag = "tags"

@@ -1,0 +1,10 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="site-title" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
+    <nav class="site-nav">
+      <a href="{{ "/" | relURL }}">首页</a>
+      <a href="{{ "/posts/" | relURL }}">全部文章</a>
+      {{ with .Site.Params.github }}<a href="{{ . }}" rel="noopener">GitHub</a>{{ end }}
+    </nav>
+  </div>
+</header>
