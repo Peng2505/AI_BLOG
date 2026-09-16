@@ -1,0 +1,5 @@
+# 统一换行，避免 writer/publisher worker 在不同平台产生 CRLF 噪音
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.zip binary
